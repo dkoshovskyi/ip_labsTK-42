@@ -1,152 +1,254 @@
+/* Базові налаштування (скидання стилів) */
 body, h1, h2, h3, p, ul, li, figure, figcaption {
-    margin: 10px;
-    padding: 0;
-    list-style: none;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Body and Layout */
-body {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-size: 18px;
-    color: #333;
-    background-color: #f4f4f4;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Header */
+/* Налаштування сторінки */
+body {
+    line-height: 1.7;
+    font-size: 18px;
+    color: #2c3e50; /* Темно-сірий, м'якший за чорний */
+    background-color: #f7f9fa; /* Світлий приємний фон */
+}
+
+/* Шапка сайту (Header) */
 header {
-    background: #005A9C;
-    color: #fff;
-    padding: 20px;
+    background: #2b5c77; /* Глибокий морський */
+    color: #ffffff;
+    padding: 40px 20px;
     text-align: center;
+    border-bottom: 5px solid #e67e22; /* Помаранчевий акцент знизу */
 }
 
 header h1 {
-    margin: 0 0 10px;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
 }
 
-/* Navigation Bar */
+header p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* Навігаційне меню */
 nav ul {
-    background: #333;
+    background: #1a3c4f;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ecf0f1;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: color 0.3s ease;
 }
 
-/* Section and Articles */
+nav ul li a:hover,
+nav ul li a.active {
+    color: #e67e22;
+}
+
+/* Основний контент */
 section {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-/* Gallery Section */
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #2b5c77;
+}
+
+/* Картки міст та Галерея */
+.card-grid, 
 #photo-gallery ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
 }
 
+.city-card,
 #photo-gallery li {
-    width: calc(33.333% - 20px);
-    margin: 10px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+    background: #ffffff;
+    border-radius: 12px; /* Заокруглені кути */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* М'яка тінь */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.city-card:hover,
+#photo-gallery li:hover {
+    transform: translateY(-8px); /* Підняття картки при наведенні */
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.city-card img,
 #photo-gallery img {
     width: 100%;
-    height: auto;
+    height: 240px;
+    object-fit: cover; /* Пропорційне обрізання фотографій */
+    display: block;
 }
 
+.city-card figcaption,
 #photo-gallery figcaption {
-    padding: 15px;
+    padding: 25px;
     text-align: center;
-    font-style: italic;
 }
 
-/* Form Styles */
+.city-card h3 {
+    margin-bottom: 10px;
+    color: #2b5c77;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #e67e22;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d35400;
+}
+
+/* Стилі для форми (Контакти/Підписка) */
 form {
     max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
 form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
-    padding: 8px;
+    box-sizing: border-box; /* Запобігає виходу полів за краї форми */
+    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #2b5c77;
 }
 
 form button {
-    display: inline-block;
-    background: #005A9C;
-    color: #fff;
+    display: block;
+    width: 100%;
+    background: #2b5c77;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 form button:hover {
-    background: #004080;
+    background: #1a3c4f;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+/* Футер (Підвал сайту) */
+.site-footer {
+    background: #1a3c4f;
+    color: #bdc3c7;
+    padding: 50px 20px 20px;
+    margin-top: 40px;
 }
 
-footer nav ul {
-    padding: 0;
-    list-style: none;
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    gap: 20px;
 }
 
-footer nav ul li {
-    display: inline;
-    margin: 0 10px;
+.footer-content div {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
 }
 
-footer nav ul li a {
-    color: #fff;
+.footer-content h4 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.site-footer a {
+    color: #ecf0f1;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-footer .social-media a {
+.site-footer a:hover {
+    color: #e67e22;
+}
+
+.footer-socials a {
     display: inline-block;
-    margin: 0 5px;
-    color: #fff;
-    /* Add additional styles for social media icons if using images or font icons */
+    margin-right: 15px;
+    color: #ffffff;
 }
 
-footer p {
-    margin: 10px 0;
+.footer-socials img {
+    vertical-align: middle;
+    border-radius: 4px;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: underline; /* Consider removing underline if using buttons for CTA */
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #2b5c77;
+    font-size: 0.9em;
 }
