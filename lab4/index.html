@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,128 +14,123 @@
 
 <body>
     <header>
-        <h1>Реєстрація студента</h1>
+        <h2>Student card FORM</h2>
     </header>
 
     <main>
         <section>
             <form action="." method="post" enctype="multipart/form-data">
-                <h2>Персональна інформація</h2>
+                <h3>Personal Information</h3>
                 <fieldset>
-                    <legend>Основна інформація</legend>
+                    <legend>Provide your details</legend>
 
                     <div>
-                        <label for="name">Ім'я:</label>
-                        <input type="text" id="name" name="name" value="" required>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" value="" required>
                     </div>
 
                     <div>
-                        <label for="surname">Прізвище:</label>
-                        <input type="text" id="surname" name="surname" value="" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" value="" required>
                     </div>
 
                     <div>
-                        <label for="email">Електронна пошта:</label>
-                        <input type="email" id="email" name="email" value="" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter a password" required>
                     </div>
 
                     <div>
-                        <label for="password">Пароль:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-
-                    <div>
-                        <label for="age">Вік:</label>
+                        <label for="age">Age:</label>
                         <input type="number" id="age" name="age" min="0" max="120" required>
                     </div>
 
                     <div>
-                        <label for="date">Дата народження:</label>
+                        <label for="date">Date of Birth:</label>
                         <input type="date" id="date" name="date">
                     </div>
 
                     <div>
-                        <label for="gender">Стать:</label>
+                        <label>Gender:</label><br>
                         <input type="radio" id="male" name="gender" value="male" checked>
-                        <label for="male">Чоловік</label>
+                        <label for="male">Male</label><br>
                         <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Жінка</label>
+                        <label for="female">Female</label><br>
                         <input type="radio" id="other" name="gender" value="other">
-                        <label for="other">Інше</label>
+                        <label for="other">Other</label>
                     </div>
 
                     <div>
-                        <label for="languages">Мови:</label>
-                        <input type="checkbox" id="languages1" name="languages" value="english" checked><label for="languages1">Англійська </label>
-                        <input type="checkbox" id="languages2" name="languages" value="spanish"><label for="languages2">Іспанська </label>
-                        <input type="checkbox" id="languages3" name="languages" value="french"><label for="languages3">Французька </label>
-                        <input type="checkbox" id="languages4" name="languages" value="ukrainian" checked><label for="languages4">Українська </label>
-                        <input type="checkbox" id="languages5" name="languages" value="german"><label for="languages5">Німецька </label>
+                        <label>Languages Known:</label><br>
+                        <input type="checkbox" id="languages1" name="languages" value="english" checked>
+                        <label for="languages1">English</label><br>
+                        <input type="checkbox" id="languages2" name="languages" value="spanish">
+                        <label for="languages2">Spanish</label><br>
+                        <input type="checkbox" id="languages3" name="languages" value="french">
+                        <label for="languages3">French</label>
                     </div>
 
                     <div>
-                        <label for="country">Країна:</label>
+                        <label for="country">Country:</label>
                         <select id="country" name="country" required>
-                            <option value="">Виберіть країну</option>
-                            <option value="ukraine" selected>Україна</option>
-                            <option value="usa">США</option>
-                            <option value="canada">Канада</option>
-                            <option value="uk">Великобританія</option>
+                            <option value="">Select your country</option>
+                            <option value="ukraine" selected>Ukraine</option>
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="uk">UK</option>
                         </select>
                     </div>
 
                 </fieldset>
 
-                <h2>Навчальні предмети (Група ТК-42)</h2>
+                <h3>College Subjects</h3>
 
                 <fieldset>
-                    <legend>Вибери навчальні предмети</legend>
+                    <legend>Select your subjects</legend>
 
                     <div>
-                        <label for="subjects">Навчальні предмети:</label>
+                        <label for="subjects">Choose subjects:</label>
                         <br>
-                        <select multiple id="subjects" name="subjects" size="6">
-                            <option value="math">Математика</option>
-                            <option value="cs" selected>Комп'ютерні технології та науки</option>
-                            <option value="programming" selected>Програмування (Java, HTML)</option>
-                            <option value="hardware" selected>Апаратне забезпечення ПК</option>
-                            <option value="telecom" selected>Телекомунікації</option>
-                            <option value="physics">Фізика</option>
+                        <select multiple id="subjects" name="subjects" size="5">
+                            <option value="math">Mathematics</option>
+                            <option value="cs" selected>Computer Science</option>
+                            <option value="physics">Physics</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="english">English</option>
                         </select>
                     </div>
 
                     <div>
-                        <label for="range">Оціни інтерес в комп'ютерних науках:</label>
+                        <label for="range">Rate your interest in Computer Science:</label>
                         <input type="range" id="range" name="range" min="1" max="10" value="10">
                     </div>
 
                 </fieldset>
 
-                <h2>Додаткова інформація</h2>
+                <h3>Skills Assessment</h3>
                 <fieldset>
-                    <legend>Опишіть свої навички</legend>
+                    <legend>Assess your skills</legend>
                     <div>
-                        <label for="textarea">Опис навичок:</label>
+                        <label for="textarea">Describe your skills:</label>
                         <br>
-                        <textarea id="textarea" name="textarea" rows="7" cols="70">Базові навички веб-розробки (HTML, розміщення на GitHub Pages) та програмування на Java. Глибокі знання з оптимізації апаратного забезпечення: розгін, андервольтинг, налаштування BIOS, управління температурними режимами для процесорів (AMD Ryzen, Intel) та відеокарт (через MSI Afterburner, GPU-Z, Curve Optimizer). Досвід роботи зі скриптами PowerShell/Batch та утилітами (Process Lasso, ThrottleStop, G-Helper, ISLC) для максимального налаштування продуктивності ОС Windows та змагальних ігор (CS2, Warzone).</textarea>
+                        <textarea id="textarea" name="textarea" rows="7" cols="70" placeholder="List your skills here...">Basic web development skills (HTML, GitHub Pages hosting) and Java programming. Deep knowledge in hardware optimization: overclocking, undervolting, BIOS configuration, thermal management for CPUs (AMD Ryzen, Intel) and GPUs (via MSI Afterburner, GPU-Z, Curve Optimizer). Experience with PowerShell/Batch scripts and utilities (Process Lasso, ThrottleStop, G-Helper, ISLC) for maximum Windows OS performance tuning and competitive gaming (CS2, Warzone).</textarea>
                     </div>
 
                     <div>
-                        <label for="file">Файл резюме:</label>
+                        <label for="file">Upload your resume:</label>
                         <input type="file" id="file" name="file">
                     </div>
                     
                     <div>
-                        <label for="color">Улюблений колір:</label>
+                        <label for="color">Pick your favorite color:</label>
                         <input type="color" id="color" name="color" value="#1a1a1a">
                     </div>
 
                     <div>
-                        <label for="time">Час навчання:</label>
+                        <label for="time">Preferred study time:</label>
                         <input type="time" id="time" name="time">
                     </div>
                     <div>
-                        <button type="submit">Відправити</button>
+                        <button type="submit">Submit Survey</button>
                     </div>
                 </fieldset>
             </form>
@@ -145,7 +140,7 @@
     <br>
     <hr>
     <footer>
-        <small>&copy; Student card by Кошовський Дмитро. All rights reserved.</small>
+        <small>&copy; Student card by Dmytro Koshovskyi. All rights reserved.</small>
     </footer>
 
 </body>
