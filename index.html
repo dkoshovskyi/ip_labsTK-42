@@ -1,47 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student card FORM</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1>Програмування в інтернет</h1>
-        <nav>
-            <ul>
-                <li> <a href="index.html"> Головна - список робіт </a> </li>
-                <li> <a href="#labs"> Лабораторні роботи </a> 
-                <ol>
-                    <li> <a href="lab1/index.html"> Lab1 - Створення веб-сторінки зі статичним текстом та розміщення в інтернеті </a> </li>
-                    <li> <a href="lab2/index.html"> Lab2 - Створення меню сайту. Розміщення проекту в репозиторії GitHub </a> </li>
-                    <li> <a href="lab3/index.html"> Lab3 - Розробка веб-сторінки з графічними елементами і мультимедіа </a> </li>
-                </ol>
-                </li>
-            </ul>
-        </nav>
+        <h1>Реєстрація студента</h1>
     </header>
 
     <main>
-        <article>
-            <h2 id="labs">Лабораторні роботи</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque veniam atque doloribus enim deserunt explicabo eos! Molestias cupiditate magni ducimus cum excepturi fuga, labore est placeat minus, atque odit!</p>
-        </article>
+        <section>
+            <form action="." method="post" enctype="multipart/form-data">
+                <h2>Персональна інформація</h2>
+                <fieldset>
+                    <legend>Основна інформація</legend>
+
+                    <div>
+                        <label for="name">Ім'я:</label>
+                        <input type="text" id="name" name="name" value="Дмитро" required>
+                    </div>
+
+                    <div>
+                        <label for="surname">Прізвище:</label>
+                        <input type="text" id="surname" name="surname" value="Кошовський" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Електронна пошта:</label>
+                        <input type="email" id="email" name="email" value="dkoshovskyi2023@itcollege.lviv.ua" required>
+                    </div>
+
+                    <div>
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div>
+                        <label for="age">Вік:</label>
+                        <input type="number" id="age" name="age" min="0" max="120" required>
+                    </div>
+
+                    <div>
+                        <label for="date">Дата народження:</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div>
+                        <label for="gender">Стать:</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="male">Чоловік</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Жінка</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Інше</label>
+                    </div>
+
+                    <div>
+                        <label for="languages">Мови:</label>
+                        <input type="checkbox" id="languages1" name="languages" value="english" checked><label for="languages1">Англійська </label>
+                        <input type="checkbox" id="languages2" name="languages" value="spanish"><label for="languages2">Іспанська </label>
+                        <input type="checkbox" id="languages3" name="languages" value="french"><label for="languages3">Французька </label>
+                        <input type="checkbox" id="languages4" name="languages" value="ukrainian" checked><label for="languages4">Українська </label>
+                        <input type="checkbox" id="languages5" name="languages" value="german"><label for="languages5">Німецька </label>
+                    </div>
+
+                    <div>
+                        <label for="country">Країна:</label>
+                        <select id="country" name="country" required>
+                            <option value="">Виберіть країну</option>
+                            <option value="ukraine" selected>Україна</option>
+                            <option value="usa">США</option>
+                            <option value="canada">Канада</option>
+                            <option value="uk">Великобританія</option>
+                        </select>
+                    </div>
+
+                </fieldset>
+
+                <h2>Навчальні предмети (Група ТК-42)</h2>
+
+                <fieldset>
+                    <legend>Вибери навчальні предмети</legend>
+
+                    <div>
+                        <label for="subjects">Навчальні предмети:</label>
+                        <br>
+                        <select multiple id="subjects" name="subjects" size="6">
+                            <option value="math">Математика</option>
+                            <option value="cs" selected>Комп'ютерні технології та науки</option>
+                            <option value="programming" selected>Програмування (Java, HTML)</option>
+                            <option value="hardware" selected>Апаратне забезпечення ПК</option>
+                            <option value="telecom" selected>Телекомунікації</option>
+                            <option value="physics">Фізика</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="range">Оціни інтерес в комп'ютерних науках:</label>
+                        <input type="range" id="range" name="range" min="1" max="10" value="10">
+                    </div>
+
+                </fieldset>
+
+                <h2>Додаткова інформація</h2>
+                <fieldset>
+                    <legend>Опишіть свої навички</legend>
+                    <div>
+                        <label for="textarea">Опис навичок:</label>
+                        <br>
+                        <textarea id="textarea" name="textarea" rows="7" cols="70">Базові навички веб-розробки (HTML, розміщення на GitHub Pages) та програмування на Java. Глибокі знання з оптимізації апаратного забезпечення: розгін, андервольтинг, налаштування BIOS, управління температурними режимами для процесорів (AMD Ryzen, Intel) та відеокарт (через MSI Afterburner, GPU-Z, Curve Optimizer). Досвід роботи зі скриптами PowerShell/Batch та утилітами (Process Lasso, ThrottleStop, G-Helper, ISLC) для максимального налаштування продуктивності ОС Windows та змагальних ігор (CS2, Warzone).</textarea>
+                    </div>
+
+                    <div>
+                        <label for="file">Файл резюме:</label>
+                        <input type="file" id="file" name="file">
+                    </div>
+                    
+                    <div>
+                        <label for="color">Улюблений колір:</label>
+                        <input type="color" id="color" name="color" value="#1a1a1a">
+                    </div>
+
+                    <div>
+                        <label for="time">Час навчання:</label>
+                        <input type="time" id="time" name="time">
+                    </div>
+                    <div>
+                        <button type="submit">Відправити</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
     </main>
 
-    <aside>
-        <h2>Інші курси</h2>
-        <ol>
-            <li> <a href="https://www.coursera.org/learn/os-power-user-ua"> Мережні операційні системи</a> </li>
-            <li> <a href="https://ukr.pritula.academy/teams?utm_source=google&utm_medium=cpc&utm_campaign=23455002239&utm_content=192275936075&utm_term=%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%96%20%D0%BA%D1%83%D1%80%D1%81%D0%B8&utm_from=g&utm_from=google_ads&gad_source=1&gad_campaignid=23455002239&gbraid=0AAAAADnHyifTEA5CLPU2UcMoDnzvBg2Vv&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3WYX-4rgrewvfRuen-bCdZjtJTmVHyuNTRSi-ZkZAAVYutgE5fQLlRoCRPkQAvD_BwE">Корпоративні мережі</a> </li>
-            <li> <a href="https://www.ucnovator.com.ua/uk/navchannia/kke-course/">Мережі електронних комунікацій</a>  </li>
-            <li> <a href="https://econom.lnu.edu.ua/course/kompyuterni-merezhi-i-telekomunikatsiji-073-i">Телекомунікаційні та комп'ютерні мережі</a> </li>
-            <li> <a href="https://laba.ua/lecture/upravlinnya-finansami-v-biznesi?utm_source=google&utm_medium=cpc&utm_campaign=course&utm_content=search-course_DSA-ua&gad_source=1&gad_campaignid=22995653400&gbraid=0AAAAADkc1S6RNFqD0cpH_S4sEz3a5wS8L&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3Ul9RNosT_lwOTE1ayXXeICo7tXJciAFgh8ujQxdEO337su3h__ZYBoCb80QAvD_BwE">Економіка галузі</a> </li>
-        </ol>
-    </aside>
-
+    <br>
+    <hr>
     <footer>
-        &copy;Copyright 2026 by Maksym M. All right reserved.
+        <small>&copy; Student card by Кошовський Дмитро. All rights reserved.</small>
     </footer>
+
 </body>
 </html>
