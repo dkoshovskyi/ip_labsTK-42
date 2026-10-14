@@ -1,4 +1,3 @@
-/* Базові налаштування (скидання стилів) */
 body, h1, h2, h3, p, ul, li, figure, figcaption {
     margin: 0;
     padding: 0;
@@ -6,21 +5,20 @@ body, h1, h2, h3, p, ul, li, figure, figcaption {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Налаштування сторінки */
 body {
     line-height: 1.7;
     font-size: 18px;
-    color: #2c3e50; /* Темно-сірий, м'якший за чорний */
-    background-color: #f7f9fa; /* Світлий приємний фон */
+    color: #2c3e50;
+    background-color: #f7f9fa;
 }
 
 /* Шапка сайту (Header) */
 header {
-    background: #2b5c77; /* Глибокий морський */
+    background: #2b5c77;
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 5px solid #e67e22; /* Помаранчевий акцент знизу */
+    border-bottom: 5px solid #e67e22;
 }
 
 header h1 {
@@ -35,7 +33,6 @@ header p {
     font-size: 1.1em;
 }
 
-/* Навігаційне меню */
 nav ul {
     background: #1a3c4f;
     text-align: center;
@@ -61,7 +58,6 @@ nav ul li a.active {
     color: #e67e22;
 }
 
-/* Основний контент */
 section {
     padding: 40px 20px;
     margin: 0 auto;
@@ -75,7 +71,6 @@ section h2 {
     color: #2b5c77;
 }
 
-/* Картки міст та Галерея */
 .card-grid, 
 #photo-gallery ul {
     display: flex;
@@ -89,15 +84,15 @@ section h2 {
     width: 100%;
     max-width: 350px;
     background: #ffffff;
-    border-radius: 12px; /* Заокруглені кути */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* М'яка тінь */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .city-card:hover,
 #photo-gallery li:hover {
-    transform: translateY(-8px); /* Підняття картки при наведенні */
+    transform: translateY(-8px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.12);
 }
 
@@ -105,7 +100,7 @@ section h2 {
 #photo-gallery img {
     width: 100%;
     height: 240px;
-    object-fit: cover; /* Пропорційне обрізання фотографій */
+    object-fit: cover;
     display: block;
 }
 
@@ -137,7 +132,6 @@ section h2 {
     background: #d35400;
 }
 
-/* Стилі для форми (Контакти/Підписка) */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -158,7 +152,7 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
-    box-sizing: border-box; /* Запобігає виходу полів за краї форми */
+    box-sizing: border-box;
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ced4da;
@@ -192,7 +186,6 @@ form button:hover {
     background: #1a3c4f;
 }
 
-/* Футер (Підвал сайту) */
 .site-footer {
     background: #1a3c4f;
     color: #bdc3c7;
