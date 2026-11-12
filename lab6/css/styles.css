@@ -1,0 +1,177 @@
+/* Базові налаштування сторінки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding-top: 80px; /* Відступ під фіксовану шапку */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   1. POSITION: FIXED та Z-INDEX для шапки
+   ========================================= */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 15px 0;
+    z-index: 1000; /* Найвищий шар, щоб шапка перекривала всі блоки при скролі */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 1.25rem;
+}
+
+.back-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Картки секцій */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+/* =========================================
+   2. FLOAT та CLEAR
+   ========================================= */
+.float-img {
+    float: left; /* Вирівнювання ліворуч з обтіканням тексту справа */
+    width: 200px;
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+}
+
+.clear-box {
+    clear: both; /* Заборона обтікання з обох боків */
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #e0f2fe;
+    border-left: 4px solid #0284c7;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   3. POSITION: RELATIVE / ABSOLUTE та Z-INDEX
+   ========================================= */
+.layers-stage {
+    position: relative; /* Базовий контейнер для абсолютного позиціонування */
+    height: 220px;
+    margin-top: 15px;
+    background-color: #f8fafc;
+    border: 1px dashed #94a3b8;
+    border-radius: 8px;
+}
+
+.layer-box {
+    position: absolute;
+    width: 210px;
+    height: 110px;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box-1 {
+    top: 20px;
+    left: 30px;
+    background-color: #3b82f6;
+    z-index: 1; /* Нижній шар */
+}
+
+.box-2 {
+    top: 55px;
+    left: 140px;
+    background-color: #10b981;
+    z-index: 3; /* Верхній шар — перекриває сусідні блоки */
+}
+
+.box-3 {
+    top: 90px;
+    left: 250px;
+    background-color: #f59e0b;
+    z-index: 2; /* Середній шар */
+}
+
+/* =========================================
+   4. MULTICOLUMN LAYOUT
+   ========================================= */
+.multi-column-text {
+    column-count: 3;              /* Кількість колонок */
+    column-width: 240px;          /* Мінімальна ширина для адаптивності */
+    column-gap: 28px;             /* Відстань між колонками */
+    column-rule: 1px solid #cbd5e1; /* Роздільна лінія між колонками */
+    text-align: justify;
+}
+
+.multi-column-text p {
+    margin-bottom: 12px;
+}
+
+/* =========================================
+   5. Фіксована кнопка (POSITION: FIXED)
+   ========================================= */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+.scroll-top-btn:hover {
+    background-color: #1d4ed8;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 0.9rem;
+}

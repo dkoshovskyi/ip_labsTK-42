@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Float, Position, Z-index</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Фіксована шапка (position: fixed / sticky + z-index) -->
+    <header class="main-header">
+        <div class="container header-content">
+            <h1>Лабораторна робота №6</h1>
+            <nav>
+                <a href="../index.html" class="back-link">← На головну курсу</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Секція 1: Використання Float та Clear -->
+        <section class="card">
+            <h2>1. Обтікання елементів (Float та Clear)</h2>
+            <img src="img/image.svg" alt="Ілюстрація шарів CSS" class="float-img">
+            <p>
+                Властивість <strong>float</strong> дозволяє вирівняти зображення або блок по лівому чи правому краю контейнера, змушуючи текстовий потік плавно обтікати його з протилежного боку. Це класичний підхід для оформлення статей та новинних карток.
+            </p>
+            <p>
+                Щоб наступні елементи сторінки не підтягувалися вгору поруч із плаваючим блоком і не ламали сітку документа, застосовується властивість <strong>clear: both</strong>, яка примусово переносить елемент під нижню межу плаваючого об'єкта.
+            </p>
+            <div class="clear-box">Цей блок розташований нижче завдяки властивості clear: both.</div>
+        </section>
+
+        <!-- Секція 2: Позиціонування та Z-index -->
+        <section class="card">
+            <h2>2. Позиціонування та шари (Position &amp; Z-index)</h2>
+            <p>Контейнер нижче має <code>position: relative</code>, а картки всередині — <code>position: absolute</code> з різними значеннями <code>z-index</code>:</p>
+            
+            <div class="layers-stage">
+                <div class="layer-box box-1">Шар 1 (z-index: 1)</div>
+                <div class="layer-box box-2">Шар 2 (z-index: 3 — поверх усіх)</div>
+                <div class="layer-box box-3">Шар 3 (z-index: 2)</div>
+            </div>
+        </section>
+
+        <!-- Секція 3: Багатоколонковий макет (Multicolumn Layout) -->
+        <section class="card">
+            <h2>3. Багатоколонковий макет (Multicolumn)</h2>
+            <article class="multi-column-text">
+                <p>
+                    Багатоколонковий макет у CSS дозволяє легко розбити великий обсяг тексту на кілька колонок, подібно до газетної верстки. Для цього використовується властивість <code>column-count</code>, яка визначає точну кількість стовпців, або <code>column-width</code> для автоматичної адаптації під ширину екрана.
+                </p>
+                <p>
+                    Відстань між сусідніми колонками регулюється параметром <code>column-gap</code>. Щоб візуально відокремити стовпці один від одного, додають роздільну лінію за допомогою <code>column-rule</code>, синтаксис якої нагадує звичайну рамку <code>border</code>.
+                </p>
+                <p>
+                    Такий підхід значно покращує читабельність довгих статей на широких моніторах, оскільки довжина одного рядка залишається оптимальною для сприйняття оком користувача без необхідності створювати додаткові HTML-обгортки.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Фіксована кнопка повернення вгору (position: fixed + z-index) -->
+    <a href="#" class="scroll-top-btn" title="На початок сторінки">↑ Вгору</a>
+
+    <footer class="main-footer">
+        <p>Виконано в межах лабораторної роботи №6 з веб-розробки</p>
+    </footer>
+
+</body>
+</html>
