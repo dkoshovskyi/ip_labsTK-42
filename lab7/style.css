@@ -1,6 +1,3 @@
-/* ==========================================
-   Базові стилі для всієї сторінки
-   ========================================== */
 * {
     box-sizing: border-box;
 }
@@ -12,15 +9,10 @@ body {
     background-color: #f4f6f8;
 }
 
-/* ==========================================
-   ПУНКТ 3.5: Верстка header (Варіант 1)
-   Селектор: header#events_container
-   Використовуємо Flexbox для вирівнювання
-   ========================================== */
 header#events_container {
-    display: flex; /* Гнучке вирівнювання (flex) */
-    justify-content: space-between; /* Розподіл простору між елементами */
-    align-items: center; /* Вирівнювання по вертикалі по центру */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #1d2a3a;
     color: #ffffff;
     padding: 15px 40px;
@@ -47,10 +39,7 @@ header#events_container nav a:hover {
     color: #3498db;
 }
 
-/* ==========================================
-   ПУНКТ 3.6: Верстка main та "Новини університету"
-   Контейнер div.main-container та CSS Grid
-   ========================================== */
+
 main {
     padding: 30px 15px;
 }
@@ -73,13 +62,11 @@ div.main-container {
     border-bottom: 2px solid #003366;
 }
 
-/* Налаштування Grid-сітки для блоку новин */
 .news-grid {
-    display: grid; /* Використовуємо Grid */
-    gap: 20px; /* Відстань між картками новин */
+    display: grid; 
+    gap: 20px; 
 }
 
-/* Стилізація окремої картки новини */
 .news-item {
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -124,11 +111,6 @@ div.main-container {
     text-decoration: underline;
 }
 
-/* ==========================================
-   ПУНКТ 3.7: Адаптивність (Медіа-запити)
-   ========================================== */
-
-/* Mobile (мобільні пристрої): до 767px — 1 колонка */
 @media (max-width: 767px) {
     .news-grid {
         grid-template-columns: 1fr;
@@ -141,14 +123,12 @@ div.main-container {
     }
 }
 
-/* Tablet (планшети): 768px – 1023px — 2 колонки */
 @media (min-width: 768px) and (max-width: 1023px) {
     .news-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Desktop (настільні ПК): 1024px і більше — 4 колонки */
 @media (min-width: 1024px) {
     .news-grid {
         grid-template-columns: repeat(4, 1fr);
